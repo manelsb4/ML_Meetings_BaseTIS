@@ -26,21 +26,27 @@ def supervivenciaPorSexo(dataSet):
 def histogramaEdades(dataSet):
   sns.distplot(dataSet.loc[dataSet["Age"].notnull(),"Age"])
   
+# =============================================================================
+# def nullValues(dataSet):
+#   PD.COLNAMES
+#    nom_col = ['AGE'...]
+#   FOR COL IN COLNAMES:
+#     PRINT(TRAIN[COL].ISNULL / )
+#     V1 =
+#     V2 =
+#     NULL_DF = PD.DATAFRAME(COLUNMS DARTA =
+# =============================================================================
+  
 def createTitle(dataSet):
     for data in dataSet:
       data["Title"] = data.Name.str.extract("([A-Za-z]+)\.", expand = False)
+      
 
-def groupTitles(dataSet):
-  
-  
+
 def main():
-  """
-  supervivenciaPorSexo(train)
-  histogramaEdades(train)
-  """
-  createTitle(combine)
+    createTitle(combine)
+
+if __name__ == "__main__":
+    main()
+    
   
-
-
-if __name__ == '__main__':
-  main()
